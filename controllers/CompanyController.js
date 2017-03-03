@@ -1,10 +1,9 @@
 /**
- * @file quickvan-nodejs-api/controllers/CompanyController.js
- *
  * Quickvan API - Company controller
  * 28/Feb, 2017
  *
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
+ * @file quickvan-nodejs-api/controllers/CompanyController.js
  */
 'use strict';
 

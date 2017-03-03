@@ -1,9 +1,8 @@
 /**
- * @file quickvan-nodejs-api/routes/index.js
- *
  * Quickvan API - Config all files routes
  * 28/Feb, 2017
  *
+ * @file quickvan-nodejs-api/routes/index.js
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
 'use strict';
@@ -19,7 +18,7 @@ router.get('/', function (request, response) {
 });
 
 // companies
-router.use('/companies', require('./companies'));
+router.use('/api/companies', require('./companies'));
 
 // vehicles
 //router.use('/vehicles', require('./vehicles'));

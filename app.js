@@ -1,9 +1,8 @@
 /**
- * @file quickvan-nodejs-api/app.js
- *
  * Quickvan API - Initialization file
  * 28/Feb, 2017
  *
+ * @file quickvan-nodejs-api/app.js
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
 'use strict';

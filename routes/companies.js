@@ -1,9 +1,8 @@
 /**
- * @file quickvan-nodejs-api/routes/companies.js
- *
  * Quickvan API - Companies routes
  * 28/Feb, 2017
  *
+ * @file quickvan-nodejs-api/routes/companies.js
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
 'use strict';

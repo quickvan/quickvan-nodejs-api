@@ -1,9 +1,8 @@
 /**
- * @file quickvan-nodejs-api/db/mongoose.js
- *
  * Quickvan API - Mongoose connection
  * 28/Feb, 2017
  *
+ * @file quickvan-nodejs-api/db/mongoose.js
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
 'use strict';
