@@ -12,7 +12,7 @@ var express = require('express'),
     router = express.Router();
 
 router.get('/', function (request, response) {
-  // show documentation
+  // @todo show documentation
   response.status(200);
   response.json({ 'QuickvanApi': 'working' });
 });
@@ -21,7 +21,7 @@ router.get('/', function (request, response) {
 router.use('/api/companies', require('./companies'));
 
 // vehicles
-//router.use('/vehicles', require('./vehicles'));
+router.use('/api/vehicles', require('./vehicles'));
 
 // users
 //router.use('/users', require('./users'));
