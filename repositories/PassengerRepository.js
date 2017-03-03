@@ -1,11 +1,11 @@
 /**
- * Quickvan API - Passengers routes
+ * Quickvan API - Passengers repository
  * 28/Feb, 2017
  *
  * @file quickvan-nodejs-api/repositories/PassengerRepository.js
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
-'use strict'
+'use strict';
 
 function PassengerRepository(model) {
   this.model = model;

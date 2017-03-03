@@ -1,11 +1,11 @@
 /**
- * Quickvan API - Companies routes
+ * Quickvan API - Company repository
  * 28/Feb, 2017
  *
  * @file quickvan-nodejs-api/repositories/CompanyRepository.js
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
-'use strict'
+'use strict';
 
 function CompanyRepository(model) {
   this.model = model;

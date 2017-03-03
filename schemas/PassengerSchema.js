@@ -5,7 +5,7 @@
  * @file quickvan-nodejs-api/schemas/PassengerSchema.js
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
-'use strict'
+'use strict';
 
 var mongoose = require('../db/mongoose');
 

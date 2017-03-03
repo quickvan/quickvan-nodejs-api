@@ -7,7 +7,7 @@
  */
 'use strict';
 
-var debug = require('debug')('quickvan:controller');
+var debug = require('debug')('quickvan:controller:company');
 var Promise = require('bluebird');
 
 var handleNotFound = function (data) {

@@ -26,4 +26,7 @@ router.use('/api/vehicles', require('./api/vehicles'));
 // passengers
 router.use('/api/passengers', require('./api/passengers'));
 
+// travels
+router.use('/api/travels', require('./api/travels'));
+
 module.exports = router;

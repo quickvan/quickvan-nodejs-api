@@ -1,13 +1,13 @@
 /**
- * Quickvan API - Vehicle controller
+ * Quickvan API - Travel controller
  * 28/Feb, 2017
  *
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
- * @file quickvan-nodejs-api/controllers/PassengersController.js
+ * @file quickvan-nodejs-api/controllers/TravelController.js
  */
 'use strict';
 
-var debug = require('debug')('quickvan:controller:passenger');
+var debug = require('debug')('quickvan:controller:travel');
 var Promise = require('bluebird');
 
 var handleNotFound = function (data) {
@@ -19,11 +19,11 @@ var handleNotFound = function (data) {
   return data;
 };
 
-function PassengersController(PassengersRepository) {
-  this.model = Promise.promisifyAll(PassengersRepository);
+function TravelController(TravelRepository) {
+  this.model = Promise.promisifyAll(TravelRepository);
 }
 
-PassengersController.prototype.getAll = function (req, res, next) {
+TravelController.prototype.getAll = function (req, res, next) {
   this.model.findAsync({})
     .then(handleSuccess)
     .catch(next);
@@ -33,7 +33,7 @@ PassengersController.prototype.getAll = function (req, res, next) {
   }
 };
 
-PassengersController.prototype.getById = function (req, res, next) {
+TravelController.prototype.getById = function (req, res, next) {
   var _id = req.params._id;
 
   this.model.findOneAsync(_id)
@@ -46,7 +46,7 @@ PassengersController.prototype.getById = function (req, res, next) {
   }
 };
 
-PassengersController.prototype.create = function (req, res, next) {
+TravelController.prototype.create = function (req, res, next) {
   var body = req.body;
 
   this.model.createAsync(body)
@@ -58,7 +58,7 @@ PassengersController.prototype.create = function (req, res, next) {
   }
 };
 
-PassengersController.prototype.update = function (req, res, next) {
+TravelController.prototype.update = function (req, res, next) {
   var _id = req.params._id,
     body  = req.body;
 
@@ -71,7 +71,7 @@ PassengersController.prototype.update = function (req, res, next) {
   }
 };
 
-PassengersController.prototype.remove = function (req, res, next) {
+TravelController.prototype.remove = function (req, res, next) {
   var _id = req.params._id;
 
   this.model.removeAsync(_id)
@@ -83,6 +83,6 @@ PassengersController.prototype.remove = function (req, res, next) {
   }
 };
 
-module.exports = function (PassengersRepository) {
-  return new PassengersController(PassengersRepository);
+module.exports = function (TravelRepository) {
+  return new TravelController(TravelRepository);
 };
