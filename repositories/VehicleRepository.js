@@ -1,40 +1,40 @@
 /**
- * Quickvan API - Company repository
+ * Quickvan API - Vehicle repository
  * 28/Feb, 2017
  *
- * @file quickvan-nodejs-api/repositories/CompanyRepository.js
+ * @file quickvan-nodejs-api/repositories/VehicleRepository.js
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
 'use strict';
 
-function CompanyRepository(model) {
+function VehicleRepository(model) {
   this.model = model;
 }
 
-CompanyRepository.prototype.create = function (data, callback) {
+VehicleRepository.prototype.create = function (data, callback) {
   var model = new this.model(data);
   model.save(function (err, result) {
     callback(err, result);
   });
 };
 
-CompanyRepository.prototype.find = function (query, callback) {
+VehicleRepository.prototype.find = function (query, callback) {
   this.model.find(query).exec(callback);
 };
 
-CompanyRepository.prototype.findOne = function (_id, callback) {
+VehicleRepository.prototype.findOne = function (_id, callback) {
   var query = { _id: _id };
   this.model.findOne(query).exec(callback);
 };
 
-CompanyRepository.prototype.update = function (_id, data, callback) {
+VehicleRepository.prototype.update = function (_id, data, callback) {
   var query = { _id: _id };
   this.model.update(query, data).exec(function (err, result) {
     callback(err, result);
   });
 };
 
-CompanyRepository.prototype.remove = function (_id, callback) {
+VehicleRepository.prototype.remove = function (_id, callback) {
   var query = { _id: _id };
   this.model.remove(query).exec(function (err, result) {
     callback(err, result);
@@ -42,7 +42,7 @@ CompanyRepository.prototype.remove = function (_id, callback) {
 };
 
 module.exports = function (mongoose) {
-  var schema = require('../schemas/CompanySchema');
-  var Company = mongoose.model('Company', schema);
-  return new CompanyRepository(Company);
+  var schema = require('../schemas/VehicleSchema');
+  var Vehicle = mongoose.model('Vehicle', schema);
+  return new VehicleRepository(Vehicle);
 };
