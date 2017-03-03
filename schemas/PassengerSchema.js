@@ -1,20 +1,18 @@
 /**
- * Quickvan API - Company Schema
+ * Quickvan API - Passenger Schema
  * 28/Feb, 2017
  *
- * @file quickvan-nodejs-api/schemas/CompanySchema.js
+ * @file quickvan-nodejs-api/schemas/PassengerSchema.js
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
 'use strict'
 
 var mongoose = require('../db/mongoose');
 
-var CompanySchema = mongoose.Schema({
-  responsible: { type: String, trim: true, required: true },
-  name       : { type: String, trim: true, required: true },
-  cnpj       : { type: String, trim: true, required: true },
-  phone      : { type: String, trim: true, required: true },
-  image      : { type: String, trim: true, required: true },
+var PassengerSchema = mongoose.Schema({
+  name  : { type: String, trim: true, required: true },
+  phone : { type: String, trim: true, required: true },
+  imagem: { type: String, trim: true, required: true },
   access: {
     email   : { type: String, trim: true, required: true },
     password: { type: String, required: true }
@@ -22,7 +20,7 @@ var CompanySchema = mongoose.Schema({
   address: {
     zipcode     : { type: String, trim: true, required: true },
     street      : { type: String, trim: true, required: true },
-    complement  : { type: String, trim: true },
+    complement  : { type: String, trim: true},
     number      : { type: Number, required: true },
     neighborhood: { type: String, trim: true, required: true },
     city        : { type: String, trim: true, required: true },
@@ -32,4 +30,4 @@ var CompanySchema = mongoose.Schema({
   createdAt    : { type: Date, default: Date.now },
 });
 
-module.exports = CompanySchema;
+module.exports = PassengerSchema;

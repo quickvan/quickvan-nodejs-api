@@ -8,8 +8,8 @@
 'use strict';
 
 var express = require('express'),
-    config  = require('config'),
-    router = express.Router();
+  config    = require('config'),
+  router    = express.Router();
 
 router.get('/', function (request, response) {
   // @todo show documentation
@@ -18,12 +18,12 @@ router.get('/', function (request, response) {
 });
 
 // companies
-router.use('/api/companies', require('./companies'));
+router.use('/api/companies', require('./api/companies'));
 
 // vehicles
-router.use('/api/vehicles', require('./vehicles'));
+router.use('/api/vehicles', require('./api/vehicles'));
 
-// users
-//router.use('/users', require('./users'));
+// passengers
+router.use('/api/passengers', require('./api/passengers'));
 
 module.exports = router;

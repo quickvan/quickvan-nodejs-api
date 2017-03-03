@@ -2,7 +2,7 @@
  * Quickvan API - Vehicles routes
  * 28/Feb, 2017
  *
- * @file quickvan-nodejs-api/routes/vehicles.js
+ * @file quickvan-nodejs-api/routes/api/vehicles.js
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
 'use strict';
@@ -11,9 +11,9 @@ var express = require('express'),
   config    = require('config'),
   router    = express.Router();
 
-var mongoose          = require('../db/mongoose');
-var VehicleRepository = require('../repositories/VehicleRepository')(mongoose);
-var VehicleController = require('../controllers/VehicleController')(VehicleRepository);
+var mongoose          = require('../../db/mongoose');
+var VehicleRepository = require('../../repositories/VehicleRepository')(mongoose);
+var VehicleController = require('../../controllers/VehicleController')(VehicleRepository);
 
 router.get('/', VehicleController.getAll.bind(VehicleController));
 router.get('/:_id', VehicleController.getById.bind(VehicleController));
