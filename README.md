@@ -17,7 +17,7 @@ npm run nodemon
 
   ```
   [GET]     /api/companies
-  [GET]     /api/companies/:_id
+  [GET]     /api/companies/:id
   [POST]    /api/companies
   [PUT]     /api/companies/:id
   [DELETE]  /api/companies/:id
@@ -27,7 +27,7 @@ npm run nodemon
 
   ```
   [GET]     /api/vehicles
-  [GET]     /api/vehicles/:_id
+  [GET]     /api/vehicles/:id
   [POST]    /api/vehicles
   [PUT]     /api/vehicles/:id
   [DELETE]  /api/vehicles/:id
@@ -37,7 +37,7 @@ npm run nodemon
 
   ```
   [GET]     /api/passengers
-  [GET]     /api/passengers/:_id
+  [GET]     /api/passengers/:id
   [POST]    /api/passengers
   [PUT]     /api/passengers/:id
   [DELETE]  /api/passengers/:id
@@ -47,7 +47,7 @@ npm run nodemon
 
   ```
   [GET]     /api/travels
-  [GET]     /api/travels/:_id
+  [GET]     /api/travels/:id
   [POST]    /api/travels
   [PUT]     /api/travels/:id
   [DELETE]  /api/travels/:id
