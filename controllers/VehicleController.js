@@ -7,12 +7,12 @@
  */
 'use strict';
 
-var debug = require('debug')('quickvan:controller:vehicle');
-var Promise = require('bluebird');
+const debug = require('debug')('quickvan:controller:vehicle');
+const Promise = require('bluebird');
 
-var handleNotFound = function (data) {
+const handleNotFound = function (data) {
   if (! data) {
-    var err = new Error('Not Found');
+    const err = new Error('Not Found');
     err.status = 404;
     throw err;
   }
@@ -34,7 +34,7 @@ VehicleController.prototype.getAll = function (req, res, next) {
 };
 
 VehicleController.prototype.getById = function (req, res, next) {
-  var _id = req.params._id;
+  const _id = req.params._id;
 
   this.model.findOneAsync(_id)
     .then(handleNotFound)
@@ -47,7 +47,7 @@ VehicleController.prototype.getById = function (req, res, next) {
 };
 
 VehicleController.prototype.create = function (req, res, next) {
-  var body = req.body;
+  const body = req.body;
 
   this.model.createAsync(body)
     .then(handleSuccess)
@@ -59,7 +59,7 @@ VehicleController.prototype.create = function (req, res, next) {
 };
 
 VehicleController.prototype.update = function (req, res, next) {
-  var _id = req.params._id,
+  const _id = req.params._id,
     body  = req.body;
 
   this.model.updateAsync(_id, body)
@@ -72,7 +72,7 @@ VehicleController.prototype.update = function (req, res, next) {
 };
 
 VehicleController.prototype.remove = function (req, res, next) {
-  var _id = req.params._id;
+  const _id = req.params._id;
 
   this.model.removeAsync(_id)
     .then(handleSuccess)

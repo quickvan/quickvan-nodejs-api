@@ -7,13 +7,13 @@
  */
 'use strict';
 
-var express = require('express'),
-  config    = require('config'),
-  router    = express.Router();
+const express = require('express'),
+  config      = require('config'),
+  router      = express.Router();
 
-var mongoose          = require('../../db/mongoose');
-var VehicleRepository = require('../../repositories/VehicleRepository')(mongoose);
-var VehicleController = require('../../controllers/VehicleController')(VehicleRepository);
+const mongoose          = require('../../db/mongoose');
+const VehicleRepository = require('../../repositories/VehicleRepository')(mongoose);
+const VehicleController = require('../../controllers/VehicleController')(VehicleRepository);
 
 router.get('/', VehicleController.getAll.bind(VehicleController));
 router.get('/:_id', VehicleController.getById.bind(VehicleController));

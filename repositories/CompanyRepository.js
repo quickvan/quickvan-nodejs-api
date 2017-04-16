@@ -12,7 +12,7 @@ function CompanyRepository(model) {
 }
 
 CompanyRepository.prototype.create = function (data, callback) {
-  var model = new this.model(data);
+  const model = new this.model(data);
   model.save(function (err, result) {
     callback(err, result);
   });
@@ -23,26 +23,26 @@ CompanyRepository.prototype.find = function (query, callback) {
 };
 
 CompanyRepository.prototype.findOne = function (_id, callback) {
-  var query = { _id: _id };
+  const query = { _id: _id };
   this.model.findOne(query).exec(callback);
 };
 
 CompanyRepository.prototype.update = function (_id, data, callback) {
-  var query = { _id: _id };
+  const query = { _id: _id };
   this.model.update(query, data).exec(function (err, result) {
     callback(err, result);
   });
 };
 
 CompanyRepository.prototype.remove = function (_id, callback) {
-  var query = { _id: _id };
+  const query = { _id: _id };
   this.model.remove(query).exec(function (err, result) {
     callback(err, result);
   });
 };
 
 module.exports = function (mongoose) {
-  var schema = require('../schemas/CompanySchema');
-  var Company = mongoose.model('Company', schema);
+  const schema = require('../schemas/CompanySchema');
+  const Company = mongoose.model('Company', schema);
   return new CompanyRepository(Company);
 };
