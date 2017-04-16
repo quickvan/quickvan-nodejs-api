@@ -12,7 +12,7 @@ function PassengerRepository(model) {
 }
 
 PassengerRepository.prototype.create = function (data, callback) {
-  var model = new this.model(data);
+  const model = new this.model(data);
   model.save(function (err, result) {
     callback(err, result);
   });
@@ -23,26 +23,26 @@ PassengerRepository.prototype.find = function (query, callback) {
 };
 
 PassengerRepository.prototype.findOne = function (_id, callback) {
-  var query = { _id: _id };
+  const query = { _id: _id };
   this.model.findOne(query).exec(callback);
 };
 
 PassengerRepository.prototype.update = function (_id, data, callback) {
-  var query = { _id: _id };
+  const query = { _id: _id };
   this.model.update(query, data).exec(function (err, result) {
     callback(err, result);
   });
 };
 
 PassengerRepository.prototype.remove = function (_id, callback) {
-  var query = { _id: _id };
+  const query = { _id: _id };
   this.model.remove(query).exec(function (err, result) {
     callback(err, result);
   });
 };
 
 module.exports = function (mongoose) {
-  var schema = require('../schemas/PassengerSchema');
-  var Passenger = mongoose.model('Passenger', schema);
+  const schema = require('../schemas/PassengerSchema');
+  const Passenger = mongoose.model('Passenger', schema);
   return new PassengerRepository(Passenger);
 };

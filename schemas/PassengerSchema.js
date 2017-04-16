@@ -7,9 +7,9 @@
  */
 'use strict';
 
-var mongoose = require('../db/mongoose');
+const mongoose = require('../db/mongoose');
 
-var PassengerSchema = mongoose.Schema({
+const PassengerSchema = mongoose.Schema({
   name  : { type: String, trim: true, required: true },
   phone : { type: String, trim: true, required: true },
   imagem: { type: String, trim: true, required: true },

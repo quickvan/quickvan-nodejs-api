@@ -7,9 +7,9 @@
  */
 'use strict';
 
-var express = require('express'),
-  config    = require('config'),
-  router    = express.Router();
+const express = require('express'),
+  config      = require('config'),
+  router      = express.Router();
 
 router.get('/', function (request, response) {
   // @todo show documentation

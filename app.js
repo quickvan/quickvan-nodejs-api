@@ -7,7 +7,7 @@
  */
 'use strict';
 
-var express      = require('express'),
+const express    = require('express'),
   methodOverride = require('method-override'),
   bodyParser     = require('body-parser'),
   app            = express();
@@ -41,7 +41,7 @@ app.use('/', require('./routes'));
 
 // error handling
 app.use(function (request, response, next) {
-  var err = new Error('Not found');
+  const err = new Error('Not found');
   err.status = 404;
   next(err);
 });

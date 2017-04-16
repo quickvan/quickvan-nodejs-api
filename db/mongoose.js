@@ -7,24 +7,24 @@
  */
 'use strict';
 
-var mongoose = require('mongoose'),
-  debug      = require('debug')('quickvan_api:db'),
-  config     = require('config');
+const mongoose = require('mongoose'),
+  debug        = require('debug')('quickvan_api:db'),
+  config       = require('config');
 
 function _connection() {
-  var username = config.get('mongo.username'),
-    password   = config.get('mongo.password'),
-    server     = config.get('mongo.server'),
-    port       = config.get('mongo.port'),
-    database   = config.get('mongo.database'),
-    auth       = username ? username + ':' + password + '@' : '';
+  const username = config.get('mongo.username'),
+    password     = config.get('mongo.password'),
+    server       = config.get('mongo.server'),
+    port         = config.get('mongo.port'),
+    database     = config.get('mongo.database'),
+    auth         = username ? username + ':' + password + '@' : '';
 
   return 'mongodb://' + auth + server + ':' + port + '/' + database;
 }
 
 mongoose.connect(_connection());
 
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on('error', function (err) {
   debug(err);
 });
