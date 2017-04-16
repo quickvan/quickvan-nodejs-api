@@ -1,5 +1,7 @@
 # Quickvan - API
 
+Protótipo da API REST utilizada nas aplicações web e mobile da QuickVan.
+
 ## Instalação
 
 ```
